@@ -32,15 +32,6 @@ int main(int argc, char *argv[]){
 
 	while(1){
 		listen(mSocket, 5);
-		client_len = sizeof(client_addr);
-		newsocket = accept(mSocket, (struct sockaddr *) &client_addr, &client_len);
-		//if error accept
-		bzero(buffer,256);
-		n = read(newsocket, buffer, 256);
-		//if error reading
-		printf("here is the mesage: %s \n", buffer);
-		n = write(newsocket, "I got your message", 18);
-	
 	}
 }
 
